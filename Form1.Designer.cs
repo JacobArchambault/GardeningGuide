@@ -37,6 +37,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtBxResultTrees = new System.Windows.Forms.TextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.SuspendLayout();
             // 
             // label1
@@ -140,6 +141,15 @@
             this.txtBxResultTrees.Size = new System.Drawing.Size(180, 31);
             this.txtBxResultTrees.TabIndex = 8;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "Type Here";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -155,6 +165,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmboFlowers);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.Color.DarkKhaki;
             this.Name = "Form1";
             this.Text = "Gardening Guide";
@@ -175,6 +186,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtBxResultTrees;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
 
