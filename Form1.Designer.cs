@@ -32,7 +32,11 @@
             this.cmboFlowers = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lstBxTrees = new System.Windows.Forms.ListBox();
+            this.txtBxResultFlowers = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtBxResultTrees = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -56,6 +60,13 @@
             "Asters",
             "Mums"});
             this.cmboFlowers.FormattingEnabled = true;
+            this.cmboFlowers.Items.AddRange(new object[] {
+            "Roses",
+            "Orchids",
+            "Tulips",
+            "Daisies",
+            "Asters",
+            "Mums"});
             this.cmboFlowers.Location = new System.Drawing.Point(72, 133);
             this.cmboFlowers.Name = "cmboFlowers";
             this.cmboFlowers.Size = new System.Drawing.Size(182, 33);
@@ -65,7 +76,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(140, 105);
+            this.label2.Location = new System.Drawing.Point(72, 105);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 25);
             this.label2.TabIndex = 2;
@@ -74,25 +85,60 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(454, 105);
+            this.label3.Location = new System.Drawing.Point(364, 105);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "Trees";
             // 
-            // listBox1
+            // lstBxTrees
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 25;
-            this.listBox1.Items.AddRange(new object[] {
+            this.lstBxTrees.FormattingEnabled = true;
+            this.lstBxTrees.ItemHeight = 25;
+            this.lstBxTrees.Items.AddRange(new object[] {
             "Maple",
             "Oak",
             "Palm",
             "Pine"});
-            this.listBox1.Location = new System.Drawing.Point(364, 133);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(180, 129);
-            this.listBox1.TabIndex = 4;
+            this.lstBxTrees.Location = new System.Drawing.Point(364, 133);
+            this.lstBxTrees.Name = "lstBxTrees";
+            this.lstBxTrees.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.lstBxTrees.Size = new System.Drawing.Size(180, 129);
+            this.lstBxTrees.Sorted = true;
+            this.lstBxTrees.TabIndex = 4;
+            this.lstBxTrees.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // txtBxResultFlowers
+            // 
+            this.txtBxResultFlowers.Location = new System.Drawing.Point(72, 315);
+            this.txtBxResultFlowers.Name = "txtBxResultFlowers";
+            this.txtBxResultFlowers.Size = new System.Drawing.Size(182, 31);
+            this.txtBxResultFlowers.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(72, 287);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(152, 25);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Flower preference";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(364, 287);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(139, 25);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Tree preferences";
+            // 
+            // txtBxResultTrees
+            // 
+            this.txtBxResultTrees.Location = new System.Drawing.Point(364, 315);
+            this.txtBxResultTrees.Name = "txtBxResultTrees";
+            this.txtBxResultTrees.Size = new System.Drawing.Size(180, 31);
+            this.txtBxResultTrees.TabIndex = 8;
             // 
             // Form1
             // 
@@ -100,7 +146,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.txtBxResultTrees);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtBxResultFlowers);
+            this.Controls.Add(this.lstBxTrees);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmboFlowers);
@@ -119,8 +169,12 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lstBxTrees;
         private System.Windows.Forms.ComboBox cmboFlowers;
+        private System.Windows.Forms.TextBox txtBxResultFlowers;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtBxResultTrees;
     }
 }
 
